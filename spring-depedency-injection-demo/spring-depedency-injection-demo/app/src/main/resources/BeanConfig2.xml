@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="amdComputer" class="com.devrezaur.main.model.implementation.AmdComputer">
+        <constructor-arg index="0" value="AMD"/>
+        <constructor-arg index="1" value="Rygen 7"/>
+        <constructor-arg index="2" value="1660 Super"/>
+    </bean>
+
+    <bean id="intelComputer" class="com.devrezaur.main.model.implementation.IntelComputer">
+        <constructor-arg index="0" value="Intel"/>
+        <constructor-arg index="1" value="i7 10th Gen"/>
+        <constructor-arg index="2" value="32 GB"/>
+        <constructor-arg index="3" value="1 TB"/>
+    </bean>
+
+    <bean id="developer1" class="com.devrezaur.main.model.Developer">
+        <constructor-arg index="0" value="Rezaur Rahman"/>
+        <constructor-arg index="1" value="Enterprise Java"/>
+        <constructor-arg index="2" ref="amdComputer"/>
+    </bean>
+</beans>
